@@ -99,7 +99,7 @@
 		},
 		"externalMqtttopicprefix": {
 			"type": "text",
-			"label": "Prefix for external MQTT topic to subscribe. Default is zigbee2mqtt",
+			"label": "Prefix for external MQTT topic to subscribe. Default is zigbee2mqtt/#",
 			"newLine": true,
 			"hidden": "data.connectionType != 'exmqtt'"
 		},
