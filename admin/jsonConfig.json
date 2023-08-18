@@ -97,6 +97,12 @@
 			"newLine": false,
 			"hidden": "data.connectionType != 'exmqtt'"
 		},
+		"externalMqtttopicprefix": {
+			"type": "text",
+			"label": "Prefix for external MQTT topic to subscribe. Default is zigbee2mqtt",
+			"newLine": true,
+			"hidden": "data.connectionType != 'exmqtt'"
+		},
 		"externalMqttServerCredentials": {
 			"type": "checkbox",
 			"label": "Use MQTT Credentials",

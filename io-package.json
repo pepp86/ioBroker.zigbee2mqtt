@@ -236,6 +236,7 @@
         "externalMqttServerCredentials": false,
         "externalMqttServerUsername": "",
         "externalMqttServerPassword": "",
+        "externalMqtttopicprefix": "zigbee2mqtt",
         "mqttServerIPBind": "0.0.0.0",
         "mqttServerPort": 1885,
         "webUIScheme": "http",

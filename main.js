@@ -98,7 +98,7 @@ class Zigbee2mqtt extends core.Adapter {
                 this.log.info(`Connect to Zigbee2MQTT over ${this.config.connectionType == 'exmqtt' ? 'external mqtt' : 'internal mqtt'} connection.`);
             });
 
-            mqttClient.subscribe('zigbee2mqtt/#');
+            mqttClient.subscribe('${this.config.externalMqtttopicprefix}/#');
 
             mqttClient.on('message', (topic, payload) => {
                 const newMessage = `{"payload":${payload.toString() == '' ? '"null"' : payload.toString()},"topic":"${topic.slice(topic.search('/') + 1)}"}`;
