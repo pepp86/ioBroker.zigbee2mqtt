@@ -3,7 +3,7 @@
     "Select and configure your Zigbee2MQTT connection": "Виберіть і налаштуйте підключення Zigbee2MQTT",
     "Select connection to Zigbee2MQTT": "Виберіть підключення до Zigbee2MQTT",
     "Websocket": "Websocket",
-    "External MQTT-Server (Experimental)": "Зовнішній MQTT-сервер (експериментальний)",
+    "External MQTT-Server": "Зовнішній MQTT-сервер",
     "Internal MQTT-Server (Experimental)": "Внутрішній MQTT-сервер (експериментальний)",
     "Configure your Zigbee2MQTT connection": "Налаштуйте підключення Zigbee2MQTT",
     "Websocket IP-Address": "IP-адреса Websocket",
@@ -30,5 +30,17 @@
     "Use MQTT Credentials": "Використовуйте облікові дані MQTT",
     "MQTT Username": "Ім'я користувача MQTT",
     "MQTT Password": "Пароль MQTT",
-    "Download device images from Zigbee2Mqtt and use them as object icons.": "Завантажуйте зображення пристроїв із Zigbee2Mqtt і використовуйте їх як значки об’єктів."
+    "Download device images from Zigbee2Mqtt and use them as object icons.": "Завантажуйте зображення пристроїв із Zigbee2Mqtt і використовуйте їх як значки об’єктів.",
+    "Generate simple 'Hold' and 'Release' states": "Створюйте прості стани «Утримувати» та «Відпускати».",
+    "When enabled, the 'Hold' and 'Release' states are combined and the 'Hold' data point remains true until the 'Release' event arrives.": "Якщо ввімкнено, стани «Утримувати» та «Вивільнити» об’єднуються, а точка даних «Утримувати» залишається істинною, доки не надійде подія «Вивільнення».",
+    "Generate simple 'Move' and 'Stop' states": "Створення простих станів «Переміщення» та «Зупинка».",
+    "When enabled, the 'Move' and 'Stop' states are combined and the 'Move' data point remains true until the 'Stop' event arrives.": "Якщо ввімкнено, стани «Переміщення» та «Зупинити» поєднуються, а точка даних «Переміщення» залишається істинною, доки не надійде подія «Зупинити».",
+    "State configurations": "Конфігурації стану",
+    "Generate simple 'Press' and 'Release' states": "Створення простих станів «Натиснути» та «Випустити».",
+    "When enabled, the 'Press' and 'Release' states are combined and the 'Press' data point remains true until the 'Release' event arrives.": "Якщо ввімкнено, стани «Натиснути» та «Випустити» поєднуються, а точка даних «Натиснути» залишається істинною, доки не надійде подія «Випуск».",
+    "If the size is later changed to a larger value, the images already downloaded must be deleted. <br> Please note that icons are stored in the object and should therefore not be unnecessarily large!": "Якщо пізніше розмір буде змінено на більше, уже завантажені зображення необхідно видалити. <br> Зверніть увагу, що піктограми зберігаються в об'єкті, тому вони не повинні бути надмірно великими!",
+    "Automatic check for missing routers in the coordinator memory.": "Автоматична перевірка відсутності роутерів в пам'яті координатора.",
+    "With which log level should a negative search be logged?": "На якому рівні журналу слід реєструвати негативний пошук?",
+    "Time of the automatic check": "Час автоматичної перевірки",
+    "More information": "Більше інформації"
 }

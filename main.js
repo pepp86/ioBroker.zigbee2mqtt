@@ -8,6 +8,7 @@
 const core = require('@iobroker/adapter-core');
 const mqtt = require('mqtt');
 const utils = require('./lib/utils');
+const schedule = require('node-schedule');
 const checkConfig = require('./lib/check').checkConfig;
 const adapterInfo = require('./lib/messages').adapterInfo;
 const zigbee2mqttInfo = require('./lib/messages').zigbee2mqttInfo;
@@ -63,6 +64,14 @@ class Zigbee2mqtt extends core.Adapter {
         if (logfilterState && logfilterState.val) {
             // @ts-ignore
             logCustomizations.logfilter = String(logfilterState.val).split(';').filter(x => x); // filter removes empty strings here
+        }
+
+        if (this.config.coordinatorCheck == true) {
+            try {
+                schedule.scheduleJob('coordinatorCheck', this.config.coordinatorCheckCron, () => this.onStateChange('manual_trigger._.info.coordinator_check', { ack: false }));
+            } catch (e) {
+                this.log.error(e);
+            }
         }
         // MQTT
         if (['exmqtt', 'intmqtt'].includes(this.config.connectionType)) {
@@ -127,18 +136,22 @@ class Zigbee2mqtt extends core.Adapter {
         websocketController = new WebsocketController(this);
         const wsClient = websocketController.initWsClient();
 
-        wsClient.on('open', () => {
-            this.log.info('Connect to Zigbee2MQTT over websocket connection.');
-        });
+        if (wsClient) {
+            wsClient.on('open', () => {
+                this.log.info('Connect to Zigbee2MQTT over websocket connection.');
+            });
 
-        wsClient.on('message', (message) => {
-            this.messageParse(message);
-        });
+            wsClient.on('message', (message) => {
+                this.messageParse(message);
+            });
 
-        wsClient.on('close', async () => {
-            this.setStateChanged('info.connection', false, true);
-            await statesController.setAllAvailableToFalse();
-        });
+            wsClient.on('close', async () => {
+                this.setStateChanged('info.connection', false, true);
+                await statesController.setAllAvailableToFalse();
+                deviceCache = [];
+                groupCache = [];
+            });
+        }
     }
 
     async messageParse(message) {
@@ -180,6 +193,9 @@ class Zigbee2mqtt extends core.Adapter {
                 break;
             case 'bridge/event':
                 break;
+            case 'bridge/response/coordinator_check':
+                deviceController.processCoordinatorCheck(messageObj.payload);
+                break;
             case 'bridge/response/device/remove':
                 break;
             case 'bridge/response/device/options':
@@ -210,16 +226,15 @@ class Zigbee2mqtt extends core.Adapter {
                 break;
             default:
                 {
-                    // {"payload":{"state":"online"},"topic":"FL.Licht.Links/availability"}  ---->  {"payload":{"available":true},"topic":"FL.Licht.Links"}
+                    // is the payload an availability status?
                     if (messageObj.topic.endsWith('/availability')) {
-
                         // If an availability message for an old device ID comes with a payload of NULL, this is the indicator that a device has been unnamed.
-                        // If this is then still available in the cache, the messages must first be cached.
                         if (messageObj.payload == 'null') {
-                            break;
+                            return;
                         }
-
+                        // is it a viable payload?
                         if (messageObj.payload && messageObj.payload.state) {
+                            // {"payload":{"state":"online"},"topic":"FL.Licht.Links/availability"}  ---->  {"payload":{"available":true},"topic":"FL.Licht.Links"}
                             const newMessage = {
                                 payload: { available: messageObj.payload.state == 'online' },
                                 topic: messageObj.topic.replace('/availability', '')
@@ -250,7 +265,7 @@ class Zigbee2mqtt extends core.Adapter {
             if (mqttClient && !mqttClient.closed) {
                 try {
                     if (mqttClient) {
-                        mqttClient.close();
+                        mqttClient.end();
                     }
                 } catch (e) {
                     this.log.error(e);
@@ -307,12 +322,12 @@ class Zigbee2mqtt extends core.Adapter {
 
     async onStateChange(id, state) {
         if (state && state.ack == false) {
-            if (id.includes('info.debugmessages')) {
+            if (id.endsWith('info.debugmessages')) {
                 logCustomizations.debugDevices = state.val;
                 this.setState(id, state.val, true);
                 return;
             }
-            if (id.includes('info.logfilter')) {
+            if (id.endsWith('info.logfilter')) {
                 logCustomizations.logfilter = state.val.split(';').filter(x => x); // filter removes empty strings here
                 this.setState(id, state.val, true);
                 return;

@@ -3,7 +3,7 @@
     "Select and configure your Zigbee2MQTT connection": "Selecione e configure a conexão Zigbee2MQTT",
     "Select connection to Zigbee2MQTT": "Selecione a conexão com Zigbee2MQTT",
     "Websocket": "Websocket",
-    "External MQTT-Server (Experimental)": "Servidor MQTT Externo (Experimental)",
+    "External MQTT-Server": "Servidor MQTT Externo",
     "Internal MQTT-Server (Experimental)": "Servidor MQTT Interno (Experimental)",
     "Configure your Zigbee2MQTT connection": "Configure sua conexão Zigbee2MQTT",
     "Websocket IP-Address": "Endereço IP do Websocket",
@@ -30,5 +30,17 @@
     "Use MQTT Credentials": "Usar credenciais MQTT",
     "MQTT Username": "Nome de usuário MQTT",
     "MQTT Password": "Senha do MQTT",
-    "Download device images from Zigbee2Mqtt and use them as object icons.": "Baixe imagens de dispositivos do Zigbee2Mqtt e use-as como ícones de objetos."
+    "Download device images from Zigbee2Mqtt and use them as object icons.": "Baixe imagens de dispositivos do Zigbee2Mqtt e use-as como ícones de objetos.",
+    "Generate simple 'Hold' and 'Release' states": "Gerar estados simples 'Hold' e 'Release'",
+    "When enabled, the 'Hold' and 'Release' states are combined and the 'Hold' data point remains true until the 'Release' event arrives.": "Quando ativado, os estados 'Hold' e 'Release' são combinados e o ponto de dados 'Hold' permanece verdadeiro até que o evento 'Release' chegue.",
+    "Generate simple 'Move' and 'Stop' states": "Gerar estados simples 'Mover' e 'Parar'",
+    "When enabled, the 'Move' and 'Stop' states are combined and the 'Move' data point remains true until the 'Stop' event arrives.": "Quando ativado, os estados 'Mover' e 'Parar' são combinados e o ponto de dados 'Mover' permanece verdadeiro até que o evento 'Parar' chegue.",
+    "State configurations": "configurações de estado",
+    "Generate simple 'Press' and 'Release' states": "Gere estados simples de 'Pressionar' e 'Liberar'",
+    "When enabled, the 'Press' and 'Release' states are combined and the 'Press' data point remains true until the 'Release' event arrives.": "Quando ativado, os estados 'Press' e 'Release' são combinados e o ponto de dados 'Press' permanece verdadeiro até que o evento 'Release' chegue.",
+    "If the size is later changed to a larger value, the images already downloaded must be deleted. <br> Please note that icons are stored in the object and should therefore not be unnecessarily large!": "Se o tamanho for alterado posteriormente para um valor maior, as imagens já baixadas deverão ser excluídas. <br> Observe que os ícones são armazenados no objeto e, portanto, não devem ser desnecessariamente grandes!",
+    "Automatic check for missing routers in the coordinator memory.": "Verificação automática de roteadores ausentes na memória do coordenador.",
+    "With which log level should a negative search be logged?": "Com qual nível de log uma pesquisa negativa deve ser registrada?",
+    "Time of the automatic check": "Hora da verificação automática",
+    "More information": "Mais Informações"
 }

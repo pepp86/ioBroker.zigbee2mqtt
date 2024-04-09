@@ -3,7 +3,7 @@
     "Select and configure your Zigbee2MQTT connection": "Selecteer en configureer de Zigbee2MQTT-verbinding",
     "Select connection to Zigbee2MQTT": "Selecteer verbinding met Zigbee2MQTT",
     "Websocket": "Websocket",
-    "External MQTT-Server (Experimental)": "Externe MQTT-server (experimenteel)",
+    "External MQTT-Server": "Externe MQTT-server",
     "Internal MQTT-Server (Experimental)": "Interne MQTT-server (experimenteel)",
     "Configure your Zigbee2MQTT connection": "Configureer je Zigbee2MQTT-verbinding",
     "Websocket IP-Address": "Websocket IP-adres",
@@ -30,5 +30,17 @@
     "Use MQTT Credentials": "Gebruik MQTT-referenties",
     "MQTT Username": "MQTT-gebruikersnaam",
     "MQTT Password": "MQTT-wachtwoord",
-    "Download device images from Zigbee2Mqtt and use them as object icons.": "Download apparaatafbeeldingen van Zigbee2Mqtt en gebruik ze als objectpictogrammen."
+    "Download device images from Zigbee2Mqtt and use them as object icons.": "Download apparaatafbeeldingen van Zigbee2Mqtt en gebruik ze als objectpictogrammen.",
+    "Generate simple 'Hold' and 'Release' states": "Genereer eenvoudige 'Hold' en 'Release' statussen",
+    "When enabled, the 'Hold' and 'Release' states are combined and the 'Hold' data point remains true until the 'Release' event arrives.": "Indien ingeschakeld, worden de toestanden 'Hold' en 'Release' gecombineerd en blijft het datapunt 'Hold' waar totdat de 'Release'-gebeurtenis arriveert.",
+    "Generate simple 'Move' and 'Stop' states": "Genereer eenvoudige 'Move' en 'Stop' toestanden",
+    "When enabled, the 'Move' and 'Stop' states are combined and the 'Move' data point remains true until the 'Stop' event arrives.": "Indien ingeschakeld, worden de toestanden 'Verplaatsen' en 'Stop' gecombineerd en blijft het gegevenspunt 'Verplaatsen' waar totdat de gebeurtenis 'Stop' arriveert.",
+    "State configurations": "Staat configuraties",
+    "Generate simple 'Press' and 'Release' states": "Genereer eenvoudige 'Druk'- en 'loslaat'-statussen",
+    "When enabled, the 'Press' and 'Release' states are combined and the 'Press' data point remains true until the 'Release' event arrives.": "Indien ingeschakeld, worden de statussen 'Press' en 'Release' gecombineerd en blijft het datapunt 'Press' waar totdat de gebeurtenis 'Release' arriveert.",
+    "If the size is later changed to a larger value, the images already downloaded must be deleted. <br> Please note that icons are stored in the object and should therefore not be unnecessarily large!": "Als de grootte later wordt gewijzigd naar een grotere waarde, moeten de reeds gedownloade afbeeldingen worden verwijderd. <br> Let op: iconen worden in het object opgeslagen en mogen dus niet onnodig groot zijn!",
+    "Automatic check for missing routers in the coordinator memory.": "Automatische controle op ontbrekende routers in het coördinatorgeheugen.",
+    "With which log level should a negative search be logged?": "Met welk logniveau moet een negatieve zoekopdracht worden geregistreerd?",
+    "Time of the automatic check": "Tijdstip van de automatische controle",
+    "More information": "Meer informatie"
 }

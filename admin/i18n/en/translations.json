@@ -3,7 +3,7 @@
 	"Select and configure your Zigbee2MQTT connection": "Select and configure Zigbee2MQTT connection",
 	"Select connection to Zigbee2MQTT": "Select connection to Zigbee2MQTT",
 	"Websocket": "Websocket",
-	"External MQTT-Server (Experimental)": "External MQTT-Server (Experimental)",
+	"External MQTT-Server": "External MQTT-Server",
 	"Internal MQTT-Server (Experimental)": "Internal MQTT-Server (Experimental)",
 	"Configure your Zigbee2MQTT connection": "Configure your Zigbee2MQTT connection",
 	"Websocket IP-Address": "Websocket IP-Address",
@@ -30,5 +30,17 @@
 	"Use MQTT Credentials": "Use MQTT Credentials",
 	"MQTT Username": "MQTT Username",
 	"MQTT Password": "MQTT Password",
-	"Download device images from Zigbee2Mqtt and use them as object icons.": "Download device images from Zigbee2Mqtt and use them as object icons."
+	"Download device images from Zigbee2Mqtt and use them as object icons.": "Download device images from Zigbee2Mqtt and use them as object icons.",
+	"Generate simple 'Hold' and 'Release' states": "Generate simple 'Hold' and 'Release' states",
+	"When enabled, the 'Hold' and 'Release' states are combined and the 'Hold' data point remains true until the 'Release' event arrives.": "When enabled, the 'Hold' and 'Release' states are combined and the 'Hold' data point remains true until the 'Release' event arrives.",
+	"Generate simple 'Move' and 'Stop' states": "Generate simple 'Move' and 'Stop' states",
+	"When enabled, the 'Move' and 'Stop' states are combined and the 'Move' data point remains true until the 'Stop' event arrives.": "When enabled, the 'Move' and 'Stop' states are combined and the 'Move' data point remains true until the 'Stop' event arrives.",
+	"State configurations": "State configurations",
+	"Generate simple 'Press' and 'Release' states": "Generate simple 'Press' and 'Release' states",
+	"When enabled, the 'Press' and 'Release' states are combined and the 'Press' data point remains true until the 'Release' event arrives.": "When enabled, the 'Press' and 'Release' states are combined and the 'Press' data point remains true until the 'Release' event arrives.",
+	"If the size is later changed to a larger value, the images already downloaded must be deleted. <br> Please note that icons are stored in the object and should therefore not be unnecessarily large!": "If the size is later changed to a larger value, the images already downloaded must be deleted. <br> Please note that icons are stored in the object and should therefore not be unnecessarily large!",
+	"Automatic check for missing routers in the coordinator memory.": "Automatic check for missing routers in the coordinator memory.",
+	"With which log level should a negative search be logged?": "With which log level should a negative search be logged?",
+	"Time of the automatic check": "Time of the automatic check",
+	"More information": "More information"
 }

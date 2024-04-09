@@ -3,7 +3,7 @@
     "Select and configure your Zigbee2MQTT connection": "Выберите и настройте соединение Zigbee2MQTT",
     "Select connection to Zigbee2MQTT": "Выберите подключение к Zigbee2MQTT",
     "Websocket": "Веб-сокет",
-    "External MQTT-Server (Experimental)": "Внешний MQTT-сервер (экспериментальный)",
+    "External MQTT-Server": "Внешний MQTT-сервер",
     "Internal MQTT-Server (Experimental)": "Внутренний MQTT-сервер (экспериментальный)",
     "Configure your Zigbee2MQTT connection": "Настройте соединение Zigbee2MQTT",
     "Websocket IP-Address": "IP-адрес веб-сокета",
@@ -30,5 +30,17 @@
     "Use MQTT Credentials": "Используйте учетные данные MQTT",
     "MQTT Username": "Имя пользователя MQTT",
     "MQTT Password": "MQTT-пароль",
-    "Download device images from Zigbee2Mqtt and use them as object icons.": "Загрузите изображения устройств с Zigbee2Mqtt и используйте их в качестве значков объектов."
+    "Download device images from Zigbee2Mqtt and use them as object icons.": "Загрузите изображения устройств с Zigbee2Mqtt и используйте их в качестве значков объектов.",
+    "Generate simple 'Hold' and 'Release' states": "Создавайте простые состояния «Hold» и «Release»",
+    "When enabled, the 'Hold' and 'Release' states are combined and the 'Hold' data point remains true until the 'Release' event arrives.": "Когда эта функция включена, состояния «Hold» и «Release» объединяются, а точка данных «Hold» остается истинной до тех пор, пока не наступит событие «Release».",
+    "Generate simple 'Move' and 'Stop' states": "Создавайте простые состояния «Переместить» и «Стоп»",
+    "When enabled, the 'Move' and 'Stop' states are combined and the 'Move' data point remains true until the 'Stop' event arrives.": "Когда эта функция включена, состояния «Перемещение» и «Стоп» объединяются, и точка данных «Перемещение» остается истинной до тех пор, пока не наступит событие «Стоп».",
+    "State configurations": "Конфигурации состояния",
+    "Generate simple 'Press' and 'Release' states": "Создавайте простые состояния «Нажмите» и «Отпустите».",
+    "When enabled, the 'Press' and 'Release' states are combined and the 'Press' data point remains true until the 'Release' event arrives.": "Если этот параметр включен, состояния «Нажатие» и «Отпуск» объединяются, и точка данных «Нажатие» остается истинной до тех пор, пока не произойдет событие «Отпуск».",
+    "If the size is later changed to a larger value, the images already downloaded must be deleted. <br> Please note that icons are stored in the object and should therefore not be unnecessarily large!": "Если размер позже будет изменен на большее значение, уже загруженные изображения необходимо удалить. <br> Обратите внимание, что значки хранятся в объекте и поэтому не должны быть излишне большими!",
+    "Automatic check for missing routers in the coordinator memory.": "Автоматическая проверка отсутствия роутеров в памяти координатора.",
+    "With which log level should a negative search be logged?": "На каком уровне журнала следует регистрировать отрицательный поиск?",
+    "Time of the automatic check": "Время автоматической проверки",
+    "More information": "Больше информации"
 }
